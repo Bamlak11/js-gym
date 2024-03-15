@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>AccessFit Admin System</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/stylesheet.css">
 </head>
+
 <body>
+
 <div class="container">
     <div class="logo-container">
         <img src="assets/Accessfit.png" alt="AccessFit Logo">
     </div>
-    <h1>AccessFit Admin System</h1>
 
+    <h1>AccessFit Admin System</h1>
+    <div class="task">
+        <h2>Monthly Membership Fee:</h2>
+        <div id="total-membership-fee"></div>
+    </div>
+
+    <div class="task">
+        <h2>New Gym Member Client</h2>
+        <p>If the client has a trainer, please add trainer's name</p>
+        
+        <label for="Member-Name">Member Name</label>
+        <input type="text" id="member-name-input">
+        
+        <label for="member-type-select">Membership Level</label>
+        <select id="member-type-select">
+            <option value="Standard">Standard</option>
+            <option value="Premium">Premium</option>
+        </select>
+
+        <label for="trainer-name-input">Trainer Name (optional)</label>
+        <input type="text" id="trainer-name-input">
+        <button id="create-member-btn">Create New Client</button>
+        <ul id="all-member-list"></ul>
+
+    </div>
+
+    <div class="task">
+        <h3>Paid Gym Classes:</h3>
+        <ul id="gym-classes"></ul>
+    </div>
+
+    <div class="task">
+        <h3>Create a New Gym Class:</h3>
+        <input type="text" placeholder="Class Name">
+        <input type="number" placeholder="Class Price">
+        <button>Create Class</button>
+    </div>
 </div>
+
 <script src="scripts/script.js"></script>
 </body>
 </html>
